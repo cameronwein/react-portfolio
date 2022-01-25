@@ -3,7 +3,8 @@ import Header from './components/Header';
 import About from './components/About'
 import Project from './components/Project';
 import Footer from './components/Footer';
-import Contact from './components/Contact'
+import Contact from './components/Contact';
+import Resume from './components/Resume'
 
 import './App.css';
 
@@ -24,6 +25,8 @@ function App() {
             return <About></About>
           case 'Contact':
             return <Contact></Contact>
+          case 'Resume':
+            return<Resume></Resume>
           default:
             return null
         }

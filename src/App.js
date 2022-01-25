@@ -3,6 +3,7 @@ import Header from './components/Header';
 import About from './components/About'
 import Project from './components/Project';
 import Footer from './components/Footer';
+import Contact from './components/Contact'
 
 import './App.css';
 
@@ -21,7 +22,8 @@ function App() {
         switch (currentPage) {
           case 'About Me':
             return <About></About>
-
+          case 'Contact':
+            return <Contact></Contact>
           default:
             return null
         }

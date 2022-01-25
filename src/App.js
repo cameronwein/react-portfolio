@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import Nav from './components/Nav';
+import About from './components/About'
 import Project from './components/Project';
 import Footer from './components/Footer';
 
@@ -12,13 +12,20 @@ function App() {
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
 
+
   return (
+ 
     <div>
-      <Header
-        pages={pages}
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-      ></Header>
+      <Header pages={pages} setCurrentPage={setCurrentPage} currentPage={currentPage}></Header>
+      {(() => {
+        switch (currentPage) {
+          case 'About Me':
+            return <About></About>
+
+          default:
+            return null
+        }
+      })()}  
     </div>
   );
 }

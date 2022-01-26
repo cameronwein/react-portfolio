@@ -17,22 +17,25 @@ function App() {
 
   return (
  
-    <div>
+    <div className="page">
+      <div className="content">
       <Header pages={pages} setCurrentPage={setCurrentPage} currentPage={currentPage}></Header>
-      {(() => {
-        switch (currentPage) {
-          case 'About Me':
-            return <About></About>
-          case 'Portfolio':
-            return <Project></Project>
-          case 'Contact':
-            return <Contact></Contact>
-          case 'Resume':
-            return<Resume></Resume>
-          default:
-            return null
-        }
-      })()}  
+        {(() => {
+          switch (currentPage) {
+            case 'About Me':
+              return <About></About>
+            case 'Portfolio':
+              return <Project></Project>
+            case 'Contact':
+              return <Contact></Contact>
+            case 'Resume':
+              return<Resume></Resume>
+            default:
+              return null
+          }
+        })()} 
+      </div>
+      <Footer></Footer>
     </div>
   );
 }

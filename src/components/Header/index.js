@@ -11,7 +11,7 @@ function Header(props) {
 
     return (
         <>
-            <header className="flex-row space-between align-items px-1">
+            <header>
                 <h1>
                     <a href="/">Cameron Wein Portfolio</a>
                 </h1>

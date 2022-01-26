@@ -37,28 +37,33 @@ function ContactForm() {
     }
 
     return (
-        <section>
-          <h1>Contact me</h1>
-          <form id="contact-form" onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="name">Name:</label>
-                <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
-            </div>
-            <div>
-                <label htmlFor="email">Email address:</label>
-                <input type="email" defaultValue={email} name="email" onBlur={handleChange} />
-            </div>
-            <div>
-                <label htmlFor="message">Message:</label>
-                <textarea name="message" defaultValue={message} onBlur={handleChange} rows="5" />
-            </div>
-            {errorMessage && (
-                <div>
-                    <p className="error-text">{errorMessage}</p>
+        <section className="section">
+          <h3 className="section-title">Contact Me </h3>
+          <div className="section-content">
+            <form className="contact-form" onSubmit={handleSubmit}>
+                <div className="contact-info">
+                    <div className="contact-name">
+                        <label htmlFor="name">Name:</label>
+                        <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
+                    </div>
+                    <div className="contact-email">
+                        <label htmlFor="email">Email address:</label>
+                        <input type="email" defaultValue={email} name="email" onBlur={handleChange} />
+                    </div>
                 </div>
-                )}
-            <button type="submit">Submit</button>
-          </form>
+                <div className="message">
+                    <label htmlFor="message">Message:</label>
+                    <textarea   name="message" defaultValue={message} onBlur={handleChange} rows="5" />
+                </div>
+                {errorMessage && (
+                    <div>
+                        <p className="error-text">{errorMessage}</p>
+                    </div>
+                    )}
+                <button type="submit">Submit</button>
+            </form>
+            
+          </div>
         </section>
       )
     }

@@ -17,12 +17,12 @@ function Nav(props) {
             <ul className="flex-row">
             {pages.map((page) => (
                 <li
-                className={`mx-1 ${
+                className={`link-item ${
                     currentPage === page && `navActive`
                     }`}
                 key={page}
                 >
-                <span onClick={() => {setCurrentPage(page);}}>{page}</span>
+                <span className="section-link" onClick={() => {setCurrentPage(page);}}>{page}</span>
                 </li>
             ))}
             </ul>

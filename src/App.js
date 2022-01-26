@@ -23,6 +23,8 @@ function App() {
         switch (currentPage) {
           case 'About Me':
             return <About></About>
+          case 'Portfolio':
+            return <Project></Project>
           case 'Contact':
             return <Contact></Contact>
           case 'Resume':

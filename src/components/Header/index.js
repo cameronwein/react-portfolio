@@ -10,16 +10,19 @@ function Header(props) {
     } = props;
 
     return (
-        <header className="flex-row px-1">
-            <h1>
-                <a href="/">Cameron Wein Portfolio</a>
+        <>
+            <header className="flex-row space-between align-items px-1">
+                <h1>
+                    <a href="/">Cameron Wein Portfolio</a>
+                </h1>
                 <Nav         
-                pages={pages}
-                setCurrentPage={setCurrentPage}
-                currentPage={currentPage}
+                    pages={pages}
+                    setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}
                 ></Nav>
-            </h1>
-        </header>
+            </header>
+            <section className="hero"></section>
+        </>
     )
 
 }

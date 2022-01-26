@@ -5,9 +5,10 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: #8c54ff;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary-color: #114a68;
+  --secondary-color: #8bbbbd;
+  --tertiary-color: #293233;
+  --background-color: #eff2fc;
   --light: #fafafa;
   --dark: #000000;
   --darker: #111111;
@@ -34,10 +35,9 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: .1em;
-  background: var(--dark);
-  color: var(--light);
-  font-family: 'Poiret One', cursive;
-
+  background: var(--background-color);
+  color: var(--tertiary-color);
+  font-family: helvetica, Arial, sans-serif;
 }
 
 h1,
@@ -46,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: helvetica, Arial, sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -81,22 +81,69 @@ p {
   margin-top: 0;
 }
 
-a {
-  color: var(--tertiary);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
 
 header {
-  background: var(--dark);
+  background: var(--tertiary-color);
 }
 
 header a {
-  color: var(--light);
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+header h1 {
+  margin: 10px 0px;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0 0 5px white;
+  padding: 5px 10px 5px 50px;
+  background-image: linear-gradient(to right, var(--tertiary-color),var(--secondary-color));
+
+}
+
+.link-item {
+  padding: 2px 10px;
+  border-right: 0.7px solid var(--secondary-color);
+  overflow: hidden;
+}
+.link-item:last-child {
+  border-right: none;
+}
+.section-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 24px;
+  padding: 5px;
+  position: relative;
+  z-index: 9998;
+}
+.section-link::before {
+  content: "";
+  position: absolute;
+  top: 37px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-color);
+  transition-duration: .4s;
+  z-index: -1;
+}
+.link-item:hover .section-link::before {
+  top: 0;
+}
+.link-item:hover .section-link{
+  color: var(--primary-color);
+}
+.hero {
+  background-image: url("./assets/Cover/River.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  height: 300px;
+  background-position: 50% 30%;
+  margin-bottom: 50px;
 }
 
 button {
@@ -183,6 +230,10 @@ textarea {
 
 .flex-end {
   justify-content: flex-end;
+}
+
+.align-items {
+  align-items: center;
 }
 
 .mx-1 {
@@ -291,5 +342,9 @@ a {
 }
 
 .navActive {
-  color: var(--secondary);
+  color: white;
+}
+
+.icon-github {
+  color: white;
 }
